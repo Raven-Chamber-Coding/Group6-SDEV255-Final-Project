@@ -1,0 +1,39 @@
+/*style for navigation*/
+nav {
+    text-decoration: none;
+    text-align: center;
+}
+/*Nav a attributes*/
+nav a {
+	text-decoration: none;
+    font-size: 1.5em;
+    text-align: center;
+}
+/*attributes for links*/
+nav a:link {
+	color: #000000;
+}
+/*attributes for visited links*/
+nav a:visited {
+	color: #250e30;
+}
+/*attributes for links being hovered on*/
+nav a:hover {
+	color: #545351;
+}
+/*Nav bar ol*/
+nav ol {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    list-style-type: none;
+}
+/*nav bar li*/
+nav li {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+}
