@@ -23,17 +23,14 @@ nav a:hover {
 }
 /*Nav bar ol*/
 nav ol {
-    padding-left: 0;
     display: flex;
-    flex-direction: column;
-    margin: 0;
+    flex-direction: row;
     list-style-type: none;
 }
 /*nav bar li*/
 nav li {
     padding-top: .5em;
     padding-bottom: .5em;
-    padding-left: 1em;
-    padding-right: 1em;
-    width: 100%;
+    padding-left: .5em;
+    padding-right: .5em;
 }
