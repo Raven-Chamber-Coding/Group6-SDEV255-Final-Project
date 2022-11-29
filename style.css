@@ -34,3 +34,6 @@ nav li {
     padding-left: .5em;
     padding-right: .5em;
 }
+body {
+    background-color: rgb(141, 172, 140);
+}
