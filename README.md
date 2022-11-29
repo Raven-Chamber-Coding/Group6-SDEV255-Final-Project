@@ -8,7 +8,7 @@ Lucas: Manager?
 
 Spencer: 
 
-Maria: 
+Maria: front end
 
 Trello link: https://trello.com/w/sdev255finalproject2/home
 
