@@ -4,7 +4,7 @@ Roles:
 
 Austin: Designer
 
-Lucas: Manager?
+Lucas: Manager/Lead
 
 Spencer: Back-end
 
