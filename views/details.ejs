@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Suraj Kupate">
+    <title>Course | Details</title>
+</head>
+<body>
+    <nav class="navlist">
+        <ul>
+           <li><h4>Group 6</h4></li>
+           <li><a href="/homepage">Home</a></li>
+           <li><a href="/courses">Courses</a></li>
+        </ul>
+    </nav>    
+    <div class="details content">
+        <h2><%= course.course %></h2>
+        <div class="content">
+            <p><%= course.teacher %></p>
+        </div>
+        <a class="delete" data-doc="<%= course._id %>">delete</a>
+    </div>
+
+    <script>
+        const trashcan = document.querySelector("a.delete");
+
+        trashcan.addEventListener("click", (e) => {
+            const endpoint = `/courses/${trashcan.dataset.doc}`;
+
+            fetch(endpoint, {
+                method: "DELETE"
+            })
+            .then((response) => response.json())
+            .then((data) => window.location.href = data.redirect)
+            .catch(err => console.log(err));
+        })
+    </script>
+</body>
+</html>

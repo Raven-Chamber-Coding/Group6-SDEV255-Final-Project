@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="author" content="Suraj Kupate">
+   <title>Farson University</title>
+</head>
+<body>
+   <nav class="navlist">
+      <ul>
+         <li><h4>Group 6</h4></li>
+         <li><a href="/homepage">Home</a></li>
+         <li><a href="/courses">Courses</a></li>
+      </ul>
+   </nav>
+   <div class="main-box2">
+      <h1>Sign Up!!</h1>
+      <p>Add or drop classes</p>
+      <form action="" method="POST">
+        <label for="course">Course name:</label><br>
+        <input type="text" id="course" name="course" required><br>
+        <label for="teacher">Teacher name:</label><br>
+        <input type="text" id="teacher" name="teacher" required><br>
+        <button>Submit</button>
+    </form>  
+   </div>
+   <div class="courses">
+      <% if (courses.length > 0) { %>
+         <% courses.forEach(course => { %> 
+             <a class="single" href="/courses/<%= course._id %> ">
+                 <h3 class="course">Course: <%= course.course %> </h3>
+                 <p class="teacher">Teacher: <%= course.teacher %> </p>
+             </a>
+         <% }) %> 
+     <% } else { %> 
+         <p>There are no courses to display...</p>
+     <% } %> 
+   </div>
+
+</body>
+</html>
