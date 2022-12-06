@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details</title>
+    <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+    <nav class="navlist">
+        <ul>
+           <li><h4>Group 6</h4></li>
+           <li><a href="/homepage">Home</a></li>
+           <li><a href="/courses">Courses</a></li>
+        </ul>
+    </nav>    
+    <div class="main-box">
+        <h2>Course: <%= course.course %></h2>
+        <div>
+            <p>Teacher: <%= course.teacher %></p>
+        </div>
+        <a class="delete" data-doc="<%= course._id %>">delete</a>
+    </div>
+
+    <script>
+        const trashcan = document.querySelector("a.delete");
+
+        trashcan.addEventListener("click", (e) => {
+            const endpoint = `/courses/${trashcan.dataset.doc}`;
+
+            fetch(endpoint, {
+                method: "DELETE"
+            })
+            .then((response) => response.json())
+            .then((data) => window.location.href = data.redirect)
+            .catch(err => console.log(err));
+        })
+    </script>
+</body>
+</html>
