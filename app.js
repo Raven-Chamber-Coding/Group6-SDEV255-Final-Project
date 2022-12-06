@@ -70,7 +70,7 @@ app.get("/courses/:id", (req, res) => {
 app.delete("/courses/:id", (req, res) => {
     const id = req.params.id;
     
-    Blog.findByIdAndDelete(id)
+    Course.findByIdAndDelete(id)
         .then(result => {
             res.json({ redirect: "/courses" });
         })

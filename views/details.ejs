@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Suraj Kupate">
-    <title>Course | Details</title>
+    <title>Course Details</title>
+    <link rel="stylesheet" href="/style.css"> 
 </head>
 <body>
     <nav class="navlist">
@@ -15,10 +14,10 @@
            <li><a href="/courses">Courses</a></li>
         </ul>
     </nav>    
-    <div class="details content">
-        <h2><%= course.course %></h2>
-        <div class="content">
-            <p><%= course.teacher %></p>
+    <div class="main-box">
+        <h2>Course: <%= course.course %></h2>
+        <div>
+            <p>Teacher: <%= course.teacher %></p>
         </div>
         <a class="delete" data-doc="<%= course._id %>">delete</a>
     </div>

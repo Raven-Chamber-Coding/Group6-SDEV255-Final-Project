@@ -1,0 +1,56 @@
+.navlist{
+    width: 100%;
+    position: fixed;
+    padding: 5px 10%;
+    background-color: #110e2bbb;
+ }
+
+ .navlist ul{
+    display: flex;
+    list-style: none;
+ }
+
+ .navlist ul li:first-child{
+    flex: 1;
+    color: #ffffff;
+    font-size: 2rem;
+ }
+
+ .navlist ul li h4{
+    font-family: 'Times New Roman', Times, serif;
+ }
+
+ .navlist ul a{
+    display: block;
+    margin-left: 20px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+ }
+
+ .navlist ul a:hover{
+    color: #ff8800;
+ }
+/* details styles */
+ .details{
+    position: relative;
+ }
+ .delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    padding: 8px;
+ }
+ .delete:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+ }
+ .content{
+    margin-left: 20px;
+ }
+ /* details styles */
+ .details{
+    position: relative;
+ }
