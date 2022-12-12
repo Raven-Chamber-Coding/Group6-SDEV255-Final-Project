@@ -4,6 +4,7 @@ const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 const Course = require("./models/course");
+const cookieParser = require("cookie-parser");
 
 // express app
 const app = express();
