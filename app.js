@@ -3,7 +3,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const Course = require("./models/Course");
+const Course = require("./models/course");
 
 // express app
 const app = express();
