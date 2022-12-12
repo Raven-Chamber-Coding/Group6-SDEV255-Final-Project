@@ -13,7 +13,7 @@ Maria: Front-end
 
 Replit: [https://Group6-SDEV255-Final-Project.raven-chamber-c.repl.co]
 
-Trello link: https://trello.com/w/sdev255finalproject2/home
+Trello link: https://trello.com/b/xVxSQTP1/kanban-board
 
 Currently:
 
