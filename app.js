@@ -32,6 +32,10 @@ app.get("/homepage", (req, res) => {
     res.render("homepage", { title: "Homepage" });
 });
 
+app.get("/login", (req, res) => {
+    res.render("login", { title: "Log in" })
+});
+
 // course routes
 
 app.get("/courses", (req, res) => {
