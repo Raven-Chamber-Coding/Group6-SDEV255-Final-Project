@@ -22,14 +22,14 @@
      <h1>Available Classes</h1>
      <% courses.forEach(course => { %>
        <a class="single" href="/courses/<%= course._id %> ">
-         <p class="course">Course: <%= course.course %> </p>
+         <p class="course"><%= course.course %> </p>
        </a>
      <% }) %> 
 
       <h3>Available Teachers</h3>
      <% courses.forEach(course => { %>
        <a class="single" href="/courses/<%= course._id %> ">
-         <p class="teacher">Teacher: <%= course.teacher %> </p>
+         <p class="teacher"><%= course.teacher %> </p>
        </a>
      <% }) %> 
 
