@@ -33,9 +33,13 @@ app.get("/homepage", (req, res) => {
     res.render("homepage", { title: "Homepage" });
 });
 
+// login routes
+
 app.get("/login", (req, res) => {
     res.render("login", { title: "Log in" })
 });
+
+// signup routes
 
 app.get("/signup", (req, res) => {
     res.render("signup", { title: "Sign up" })
