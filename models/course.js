@@ -6,11 +6,11 @@ const Schema = mongoose.Schema;
 const courseSchema = new Schema({
     course: {
         type: String,
-        required: true
+        required: [true, 'Please enter a course name.']
     },
     teacher: {
         type: String,
-        required: true
+        required: [true, 'Please add the instructor.']
     }
 }, { timestamps:true });
 

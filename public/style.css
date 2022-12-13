@@ -1,284 +1,141 @@
 *{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-   transition: 0.5s;
-   font-family: "Century Gothic", sans-serif;
-}
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+    font-family: "Century Gothic", sans-serif;
+ }
  
-.navlist{
-   width: 100%;
-   position: fixed;
-   padding: 5px 10%;
-   background-color: #110e2bbb;
-}
+ .navlist{
+    width: 100%;
+    position: fixed;
+    padding: 5px 10%;
+    background-color: #110e2bbb;
+ }
 
-.navlist ul{
-   display: flex;
-   list-style: none;
-}
+ .navlist ul{
+    display: flex;
+    list-style: none;
+ }
 
-.navlist ul li:first-child{
-   flex: 1;
-   color: #ffffff;
-   font-size: 2rem;
-}
+ .navlist ul li:first-child{
+    flex: 1;
+    color: #ffffff;
+    font-size: 2rem;
+ }
 
-.navlist ul li h4{
-   font-family: 'Times New Roman', Times, serif;
-}
+ .navlist ul li h4{
+    font-family: 'Times New Roman', Times, serif;
+ }
 
-.navlist ul a{
-   display: block;
-   margin-left: 20px;
-   font-family: "Century Gothic", sans-serif;
-   font-size: 2rem;
-   color: white;
-   text-decoration: none;
-}
+ .navlist ul a{
+    display: block;
+    margin-left: 20px;
+    font-family: "Century Gothic", sans-serif;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+ }
 
-.navlist ul a:hover{
-   color: #ff8800;
-}
+ .navlist ul a:hover{
+    color: #ff8800;
+ }
  
-.main-box{
-   width: 100%;
-   height: 100vh;
-   background-image: linear-gradient(#000000bb, #000000bb), url(photos/pexels-pixabay-267885.jpg);
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   color: #ffffff;
-   text-align: center;
-   padding-top: 30vh;
-}
+ .main-box{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#000000bb, #000000bb), url(photos/pexels-pixabay-267885.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 30vh;
+ }
 
-.main-box2{
-   width: 100%;
-   height: 100vh;
-   background-image: linear-gradient(#000000bb, #000000bb), url(photos/Signing-contract-pen-hand.jpg);
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   color: #ffffff;
-   text-align: center;
-   padding-top: 30vh;
-}
-
-.main-box3{
-   width: 100%;
-   height: 100vh;
-   background-image: linear-gradient(#000000bb, #000000bb), url(photos/Signing-contract-pen-hand.jpg);
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   color: #ffffff;
-   text-align: center;
-   padding-top: 30vh;
-}
+ .main-box2{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(#000000bb, #000000bb), url(photos/Signing-contract-pen-hand.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 30vh;
+ }
  
-.main-box h1{
-   word-spacing: 8px;
-   font-size: 55px;
-   margin-bottom: 15px;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-}
+ .main-box h1{
+    word-spacing: 8px;
+    font-size: 55px;
+    margin-bottom: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
 
-.main-box p{
+ .main-box p{
+    font-family: "Century Gothic", sans-serif;
+    font-size: 25px;
+    letter-spacing: 1.4px;
+    margin-bottom: 40px;
+ }
+
+ .main-box a{
    font-family: "Century Gothic", sans-serif;
    font-size: 25px;
    letter-spacing: 1.4px;
    margin-bottom: 40px;
 }
 
-.main-box a{
-   font-family: "Century Gothic", sans-serif;
-   font-size: 25px;
-   letter-spacing: 1.4px;
-   margin-bottom: 40px;
-}
+ .main-box2 h1{
+    word-spacing: 8px;
+    font-size: 55px;
+    margin-bottom: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+ }
 
+ .main-box2 p{
+    font-family: "Century Gothic", sans-serif;
+    font-size: 25px;
+    letter-spacing: 1.4px;
+    margin-bottom: 40px;
+ }
 
-.main-box2 h1{
-   word-spacing: 8px;
-   position: relative; bottom:200px;
-   font-size: 35px;
-   margin-bottom: 15px;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-}
+ .main-box button{
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    border: 1px solid #ff8800;
+    color: #ffffff;
+ }
 
-.main-box2 p1{
-   word-spacing: 8px;
-   position: relative; bottom:200px; right: 60px;
-   font-size: 15px;
-   margin-bottom: 15px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+ .main-box label{
+    padding: 10px;
+    font-size: 25px;
+    color: #ffffff;
+ }
 
-.main-box2 p2{
-   word-spacing: 8px;
-   position: relative; bottom:200px; right: 20px;
-   font-size: 15px;
-   margin-bottom: 15px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+ .main-box button:hover{
+    background: #ff8800;
+    transform: scale(1.1);
+ }
+ .container{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 30px;
+ }
 
-.main-box2 p3{
-   word-spacing: 8px;
-   position: relative; bottom:200px; left: 20px;
-   font-size: 15px;
-   margin-bottom: 15px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.main-box2 p4{
-   word-spacing: 8px;
-   position: relative; bottom:200px; left: 60px;
-   font-size: 15px;
-   margin-bottom: 15px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.main-box2 h3{
-   word-spacing: 8px;
-   position: relative; bottom:180px;
-   font-size: 35px;
-   margin-bottom: 15px;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.main-box2 p5{
-   word-spacing: 8px;
-   position: relative; bottom:180px; right: 60px;
-   font-size: 15px;
-   margin-bottom: 15px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.main-box2 p6{
-   word-spacing: 8px;
-   position: relative; bottom:180px; right: 20px;
-   font-size: 15px;
-   margin-bottom: 15px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.main-box2 p7{
-   word-spacing: 8px;
-   position: relative; bottom:180px; left: 20px;
-   font-size: 15px;
-   margin-bottom: 15px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.main-box2 p8{
-   word-spacing: 8px;
-   position: relative; bottom:180px; left: 60px;
-   font-size: 15px;
-   margin-bottom: 15px;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.main-box2 h2{
-   word-spacing: 8px;
-   padding-top: 1in;
-   position: relative; bottom:200px;
-   font-size: 55px;
-   margin-bottom: 15px;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.main-box2 p{
-   font-family: "Century Gothic", sans-serif;
-   font-size: 25px;
-   position: relative; bottom:200px;
-   letter-spacing: 1.4px;
-}
-
-.main-box2 form{
-   position: relative; bottom:200px;
-   font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-
-.main-box2 text{
-   font-family: "Century Gothic", sans-serif;
-   font-size: 25px;
-   letter-spacing: 1.4px;
-   margin-bottom: 40px;
-}
-
-.main-box button{
-   padding: 10px;
-   border: none;
-   outline: none;
-   background: none;
-   border: 1px solid #ff8800;
-   color: #ffffff;
-}
-
-.main-box2 button{
-   padding: 10px;
-   position: relative; top: 10px;
-   border: none;
-   outline: none;
-   background: none;
-   border: 1px solid #ff8800;
-   color: #ffffff;
-}
-/*.main-box label{
-   padding: 10px;
-   position: relative; bottom:200px;
-   font-size: 25px;
-   color: #ffffff;
-}*/
-
-.main-box button:hover{
-   background: #ff8800;
-   transform: scale(1.1);
-}
-
-.main-box2 button:hover{
-   background: #ff8800;
-   transform: scale(1.1);
-}
-
-.container{
-   width: 80%;
-   margin: auto;
-   margin-bottom: 30px;
-}
-
-.container h2{
-   color: #ff8800;
-   text-align: center;
-   margin: 30px;
-   font-family: 'Arial Narrow Bold', sans-serif;
-   letter-spacing: 5px;
-}
-
-.courses{
-   width: 100%;
-   background-color: #110e2bbb;
-}
-
-.courses h2{
-   color: #ffffff;
-}
-
-.courses h3{
-   color: #ffffff;
-}
-
-.courses p{
-   color: #ffffff;
-}
-
+ .container h2{
+    color: #ff8800;
+    text-align: center;
+    margin: 30px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 5px;
+ }
  /* details styles */
-.details{
+ .details{
    position: relative;
 }
-
 .delete{
    position: absolute;
    top: 0;
@@ -286,16 +143,13 @@
    border-radius: 50%;
    padding: 8px;
 }
-
 .delete:hover{
    cursor: pointer;
    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
 }
-
 .content{
    margin-left: 20px;
 }
-
 /* details styles */
 .details{
    position: relative;
