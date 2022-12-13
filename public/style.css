@@ -182,7 +182,7 @@
    position: relative;
 }
 /* courses class */
-/*courses{
+.courses{
    width: 100%;
    background-color: #110e2bbb;
 }
@@ -197,4 +197,4 @@
 
 .courses p{
    color: #ffffff;
-}*/
+}
