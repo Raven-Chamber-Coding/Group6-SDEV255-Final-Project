@@ -226,12 +226,12 @@
    border: 1px solid #ff8800;
    color: #ffffff;
 }
-.main-box label{
+/*.main-box label{
    padding: 10px;
    position: relative; bottom:200px;
    font-size: 25px;
    color: #ffffff;
-}
+}*/
 
 .main-box button:hover{
    background: #ff8800;
