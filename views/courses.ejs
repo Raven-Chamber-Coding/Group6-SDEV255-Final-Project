@@ -18,18 +18,20 @@
       </ul>
    </nav>
    <div class="main-box2">
-      
-      <h1>Available Classes</h1>
-      <p1>Math</p1>
-      <p2>Science</p2>
-      <p3>Biology</p3>
-      <p4>Engineering</p4>
+     
+     <h1>Available Classes</h1>
+     <% courses.forEach(course => { %>
+       <a class="single" href="/courses/<%= course._id %> ">
+         <p class="course">Course: <%= course.course %> </p>
+       </a>
+     <% }) %> 
 
       <h3>Available Teachers</h3>
-      <p5>John Smith</p5>
-      <p6>Stacy Adams</p6>
-      <p7>Frank Rose</p7>
-      <p8>Melissa Grant</p8>
+     <% courses.forEach(course => { %>
+       <a class="single" href="/courses/<%= course._id %> ">
+         <p class="teacher">Teacher: <%= course.teacher %> </p>
+       </a>
+     <% }) %> 
 
       <h2>Sign Up!!</h2>
       <p>Add or drop classes</p>
