@@ -1,6 +1,18 @@
 const User = require("./models/User");
 const jwt = require("jsonwebtoken");
 
+//handle errors
+//handlers for errors go here
+
+//create token
+//const maxAge = 3 * 24 * 60 * 60;
+//const createToken = (id) => {
+//    return jwt.sign({ id }, "user secret", {
+//        expiresIn: maxAge
+//    }) 
+//}
+
+// exports
 module.exports.homepage_get = (req, res) => {
     res.render("homepage", { title: "Homepage" });
 }
