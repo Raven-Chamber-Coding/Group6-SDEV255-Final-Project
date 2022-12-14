@@ -19,7 +19,7 @@ Currently:
 
     Utilizing your knowledge from the tutorials, videos, and zyBook assignments, implement the following features for your web application
     
-        Create a login system in order for users to login.
+        We need to give the fucntionality to users
         
         BONUS: Make sure to separate authorization features based on who the user is (teacher/student)
         
