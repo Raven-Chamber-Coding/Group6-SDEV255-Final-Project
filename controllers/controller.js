@@ -1,16 +1,46 @@
-const User = require("./models/User");
+const User = require("../models/user");
+const Course = require("../models/course");
 const jwt = require("jsonwebtoken");
 
 //handle errors
-//handlers for errors go here
+const handleErrors = (err) => {
+    console.log(err.message, err.code);
+    let errors = { email: "", password: "" };
+
+    // incorrect email
+    if (err.message === "incorrect email") {
+        errors.email = "that email is not registered";
+    }
+    
+    // incorrect password
+    if (err.message === "incorrect password") {
+    errors.password = "that password is incorrect";
+    }
+
+    // duplicate error code
+    if (err.code === 11000) {
+        errors.email = "that email is alreasy registered";
+        return errors;
+    }
+
+    // validation error
+    if (err.message.includes("user validation failed")) {
+        Object.values(err.errors).forEach(({properties}) => {
+            errors[properties.path] =properties.message;
+        });
+    }
+
+    return errors;
+}
+
 
 //create token
-//const maxAge = 3 * 24 * 60 * 60;
-//const createToken = (id) => {
-//    return jwt.sign({ id }, "user secret", {
-//        expiresIn: maxAge
-//    }) 
-//}
+const maxAge = 3 * 24 * 60 * 60;
+const createToken = (id) => {
+    return jwt.sign({ id }, "user secret", {
+        expiresIn: maxAge
+    }) 
+}
 
 // exports
 // homepage
@@ -21,7 +51,7 @@ module.exports.homepage_get = (req, res) => {
 module.exports.signup_get = (req, res) => {
     res.render("signup", { title: "Signup" });
 }
-module.exports.signup_post = (req, res) => {
+module.exports.signup_post = async (req, res) => {
     const { email, password, firstName, lastName, role } = req.body; 
 
     try {
@@ -38,7 +68,7 @@ module.exports.signup_post = (req, res) => {
 module.exports.login_get = (req, res) => {
     res.render("login", { title: "Login" });
 }
-module.exports.login_post = (req, res) => {
+module.exports.login_post = async (req, res) => {
     const { email, password } = req.body; 
     try {
         const user = await User.login(email, password);
@@ -52,18 +82,18 @@ module.exports.logout_get = (req, res) => {
     res.cookie("jwt", "", { maxAge: 1 });
     res.redirect("/");
 }
-// courses
+/* courses (does not connect to database in here?)
 module.exports.course_get = (req, res) => {   
     Course.find().sort({ createdAt: -1})
       .then((result) => {
-        res.render("courses", { title: "Courses",courses: result })
+        res.render("courses", { courses: result, title: "Courses" })
         })
       .catch((err) => {
           console.log(err);
         })
 }
 module.exports.course_post = (req, res) => {
-    const course = new Course(req.body);
+    const course = new course(req.body);
 
     course.save()
       .then((result) => {
@@ -93,4 +123,4 @@ module.exports.course_delete = (req, res) => {
         .catch(err => {
             console.log(err);
         });
-}
+} */

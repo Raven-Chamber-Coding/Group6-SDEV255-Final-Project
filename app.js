@@ -7,31 +7,34 @@ const Course = require("./models/course");
 const cookieParser = require("cookie-parser");
 const User = require("./models/user");
 const jwt = require("jsonwebtoken");
+const { requireAuth, checkUser } = require("./middleware/middleware");
+const Routes = require("./routes/routes");
+
 
 // express app
 const app = express();
 
 // handle errors
-const handleErrors = (err) => {
-    console.log(err.message, err.code);
-    let errors = { '': '' };
-    if (err.message.includes('user validation failed')) {
-        Object.values(err.errors).forEach(({properties}) => {
-            error[properties.path] = properties.message;
-        });
-    }
-    return errors;
-}
+//const handleErrors = (err) => {
+//    console.log(err.message, err.code);
+//    let errors = { '': '' };
+//    if (err.message.includes('user validation failed')) {
+//        Object.values(err.errors).forEach(({properties}) => {
+//            error[properties.path] = properties.message;
+//        });
+//    }
+//    return errors;
+//}
 
 // jsonwebtoken
-const maxAge = 3 * 24 * 60 * 60;
-const createToken = (id) => {
-    return jwt.sign({id}, 'user secret', {
-        expiresIn: maxAge
-    });
-}
+//const maxAge = 3 * 24 * 60 * 60;
+//const createToken = (id) => {
+//    return jwt.sign({id}, 'user secret', {
+//        expiresIn: maxAge
+//    });
+//}
 
-// connect to mongodb
+// connect to mongodb 
 const dbURI = "mongodb+srv://sstrange:admin123@college.nkha0pj.mongodb.net/?retryWrites=true&w=majority";
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => app.listen(4000))
@@ -49,6 +52,12 @@ app.use(express.json());
 app.use(cookieParser());
 
 // routes
+app.get("*", checkUser);
+app.get("/", (req, res) => res.render("homepage"));
+//app.get("/courses", requireAuth, (req, res) => res.render("courses"));
+app.use(Routes);
+
+/*
 app.get("/", (req, res) => {
     res.redirect("/homepage");
 });
@@ -89,7 +98,7 @@ app.post("/signup", async (req, res) => {
         res.status(400).json('error, user not created.');
     }
 });
-
+*/
 // course routes
 
 app.get("/courses", (req, res) => {

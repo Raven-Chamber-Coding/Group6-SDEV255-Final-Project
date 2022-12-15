@@ -198,3 +198,13 @@
 .courses p{
    color: #ffffff;
 }
+
+#newuser a {
+  color: white;
+  position: relative; top: 25px;
+  font-size: 25px;
+}
+
+.password error button{
+  position: relative; top: 25px;
+}

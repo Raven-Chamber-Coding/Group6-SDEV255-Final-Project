@@ -28,3 +28,5 @@ Currently:
     Make sure that your have assigned these tasks in Trello, and complete them in a timely manner
     
     Make sure that you have synced all of your changes before turning in this assignment
+
+Errors: Bcrypt error when running locally, no idea how to fix.
