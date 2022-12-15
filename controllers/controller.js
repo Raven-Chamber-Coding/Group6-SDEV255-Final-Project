@@ -13,10 +13,11 @@ const jwt = require("jsonwebtoken");
 //}
 
 // exports
+// homepage
 module.exports.homepage_get = (req, res) => {
     res.render("homepage", { title: "Homepage" });
 }
-
+// signup
 module.exports.signup_get = (req, res) => {
     res.render("signup", { title: "Signup" });
 }
@@ -33,6 +34,7 @@ module.exports.signup_post = (req, res) => {
         res.status(400).json('error, user not created.');
     }
 }
+// login
 module.exports.login_get = (req, res) => {
     res.render("login", { title: "Login" });
 }
@@ -45,6 +47,12 @@ module.exports.login_post = (req, res) => {
         res.status(400).json({})
     }
 }
+// logout
+module.exports.logout_get = (req, res) => {
+    res.cookie("jwt", "", { maxAge: 1 });
+    res.redirect("/");
+}
+// courses
 module.exports.course_get = (req, res) => {   
     Course.find().sort({ createdAt: -1})
       .then((result) => {
