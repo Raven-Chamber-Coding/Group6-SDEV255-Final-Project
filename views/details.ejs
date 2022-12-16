@@ -1,10 +1,36 @@
-<%- include('partials/header'); -%>   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Farson University</title>
+</head>
+<body>
+    <nav class="navlist">
+        <ul>
+           <li><h4>Group 6</h4></li>
+           <% if (user) { %>
+           <li><h4>Welcome, <%= user.email %> </h4></li>
+           <% } %>
+           <li><a href="/homepage">Home</a></li>
+           <% if (user) { %>
+           <li><a href="/courses">Courses</a></li>
+           <li><a href="/studCourses">Student Courses</a></li>
+           <li><a href="/logout">Log out</a></li>
+           <% } else { %>
+           <li><a href="/login">Log in</a></li>
+           <li><a href="/signup">Sign up</a></li>
+           <% } %>
+        </ul>
+     </nav>
     <div class="main-box">
         <h2>Course: <%= course.course %></h2>
         <div>
             <p>Teacher: <%= course.teacher %></p>
         </div>
+        <% if (user) { %>
         <a class="delete" data-doc="<%= course._id %>">delete</a>
+        <% } %>
     </div>
 
     <script>

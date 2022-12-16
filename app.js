@@ -39,6 +39,15 @@ app.get("/", (req, res) => res.render("homepage"));
 app.use(Routes);
 
 // course routes (not in routes as it doesnt work inside routes)
+app.get("/studCourses", (req, res) => {
+    Course.find().sort({ createdAt: -1})
+        .then((result) => {
+            res.render("studCourses", { title: "Student Courses", courses: result })
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+})
 
 app.get("/courses", (req, res) => {
     Course.find().sort({ createdAt: -1})

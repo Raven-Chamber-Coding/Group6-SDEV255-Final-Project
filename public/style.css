@@ -99,6 +99,12 @@
    margin-bottom: 40px;
 }
 
+.main-box form {
+    display: inline-block;
+    text-align: right;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
 /* main-box2 headers */
  .main-box2 h1{
     word-spacing: 8px;
@@ -130,6 +136,7 @@
 
  .main-box button{
     padding: 10px;
+    position: center;
     border: none;
     outline: none;
     background: none;
@@ -209,3 +216,4 @@
 .password error button{
   position: relative; top: 25px;
 }
+
