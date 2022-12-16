@@ -201,7 +201,23 @@
 .courses p{
    color: #ffffff;
 }
+/* courses2 class */
+.courses2{
+   width: 100%;
+   background-color: midnightblue;
+}
 
+.courses2 h2{
+   color: #ffffff;
+}
+
+.courses2 h3{
+   color: #ffffff;
+}
+
+.courses2 p{
+   color: #ffffff;
+}
 #newuser a {
   color: white;
   position: relative; top: 25px;
