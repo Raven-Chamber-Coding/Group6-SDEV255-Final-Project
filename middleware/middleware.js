@@ -1,5 +1,4 @@
 // middleware for users
-// not finished, copied from tutorial 
 const jwt = require("jsonwebtoken");
 const User = require("../models/user")
 
