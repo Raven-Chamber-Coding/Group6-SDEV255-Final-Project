@@ -2,6 +2,10 @@
    <div class="main-box">
       <h1>Farson University</h1>
       <p>Where Your Future Begins</p>
+      <% if (!user) { %>
       <button onclick="location.href='/signup';" value="ENROLL NOW">ENROLL NOW</button>
+      <% } else { %>
+      <button onclick="location.href='/courses';" value="COURSES">COURSES</button>
+      <% } %>
    </div>
    <%- include('partials/footer'); -%>
