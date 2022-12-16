@@ -11,6 +11,9 @@
     <nav class="navlist">
         <ul>
            <li><h4>Group 6</h4></li>
+           <% if (user) { %>
+           <li><h4>Welcome, <%= user.email %> </h4></li>
+           <% } %>
            <li><a href="/homepage">Home</a></li>
            <li><a href="/courses">Courses</a></li>
            <li><a href="/login">Log in</a></li>
