@@ -29,4 +29,4 @@ Currently:
     
     Make sure that you have synced all of your changes before turning in this assignment
 
-Errors: Bcrypt error when running locally, no idea how to fix.
+Errors: All known errors fixed!
