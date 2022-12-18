@@ -7,6 +7,14 @@
         <input type="text" id="course" name="course" required><br>
         <label for="teacher">Teacher name:</label><br>
         <input type="text" id="teacher" name="teacher" required><br>
+        <label for="description">Class Description:</label><br>
+        <input type="text" id="description" name="description"><br>
+        <label for="subject">Course subject:</label><br>
+        <input type="text" id="subject" name="subject" required><br>
+        <label for="length">Length of course (by weeks):</label><br>
+        <input type="text" id="length" name="length" required><br>
+        <label for="points">Course credits:</label><br>
+        <input type="text" id="points" name="points" required><br>
         <button>Submit</button>
     </form>  
    </div>
@@ -17,6 +25,7 @@
              <a class="single" href="/courses/<%= course._id %> ">
                  <h3 class="course">Course: <%= course.course %> </h3>
                  <p class="teacher">Teacher: <%= course.teacher %> </p>
+                 <p class="subject">Subject: <%= course.subject %> </p>
              </a>
          <% }) %> 
      <% } else { %> 

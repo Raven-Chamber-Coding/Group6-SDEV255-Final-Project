@@ -98,6 +98,10 @@
         <h2>Course: <%= course.course %></h2>
         <div>
             <p>Teacher: <%= course.teacher %></p>
+            <p>Length of course by weeks: <%= course.length %></p>
+            <p>Description: <%= course.description %></p>
+            <p>Subject: <%= course.subject %></p>
+            <p>Course credits: <%= course.points %></p>
         </div>
         <% if (user) { %>
         <a class="delete" data-doc="<%= course._id %>">delete</a>

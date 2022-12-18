@@ -12,6 +12,21 @@ const courseSchema = new Schema({
     teacher: {
         type: String,
         required: [true, 'Please add the instructor.']
+    },
+    description: {
+      type: String
+    },
+    subject: {
+      type: String,
+      required: [true, 'Please add subject.']
+    },
+    length: {
+      type: String,
+      required: [true, 'Please add course length']
+    },
+    points: {
+      type: String,
+      required: [true, 'Please add course credits']
     }
 //    Students: {
 //      type: String

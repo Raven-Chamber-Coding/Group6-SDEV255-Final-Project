@@ -39,7 +39,7 @@ app.get("/", (req, res) => res.render("homepage"));
 app.use(Routes);
 
 // course routes (not in routes as it doesnt work inside routes)
-app.get("/studCourses", (req, res) => {
+app.get("/studCourses", requireAuth, (req, res) => {
     Course.find().sort({ createdAt: -1})
         .then((result) => {
             res.render("studCourses", { title: "Student Courses", courses: result })
@@ -49,7 +49,7 @@ app.get("/studCourses", (req, res) => {
         })
 })
 
-app.get("/courses", (req, res) => {
+app.get("/courses", requireAuth, (req, res) => {
     Course.find().sort({ createdAt: -1})
         .then((result) => {
             res.render("courses", { title: "Courses", courses: result })
@@ -71,7 +71,7 @@ app.post("/courses", (req, res) => {
         })
 })
 
-app.get("/courses/:id", (req, res) => {
+app.get("/courses/:id", requireAuth, (req, res) => {
     const id = req.params.id;
     Course.findById(id)
       .then(result => {
