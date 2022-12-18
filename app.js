@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const Course = require("./models/course");
 const cookieParser = require("cookie-parser");
 const User = require("./models/user");
+const Usercourse = require("./models/usercourse");
 const jwt = require("jsonwebtoken");
 const { requireAuth, checkUser } = require("./middleware/middleware");
 const Routes = require("./routes/routes");
@@ -48,6 +49,18 @@ app.get("/studCourses", requireAuth, (req, res) => {
             console.log(err);
         })
 })
+
+//app.post("/studCourses", (req, res) => {
+//    const usercourse = new Usercourse(req.body);
+
+//    usercourse.save()
+//        .then((result) => {
+//            res.redirect("/studCourses");
+//        })
+//        .catch((err) => {
+//            console.log(err);
+//        })
+//})
 
 app.get("/courses", requireAuth, (req, res) => {
     Course.find().sort({ createdAt: -1})

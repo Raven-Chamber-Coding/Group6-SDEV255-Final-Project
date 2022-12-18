@@ -2,26 +2,22 @@
    <div class="main-box2">
       <h1>Sign up!!</h1>
       <p>Sign up or drop classes.</p>
-      <form action="" method="">
-        <label for="course">Enter the Course name:</label><br>
-        <input type="text" id="course" name="course" required><br>
-        <label for="teacher">Enter the Teacher's name:</label><br>
-        <input type="text" id="teacher" name="teacher" required><br>
-        <button>Submit</button>
-    </form>  
    </div>
    <div class="courses2">
     <h2>Your current courses:</h2>
-    <p>You have no classes Currently...</p>
+      <p>You have no classes Currently...</p>
    </div>
    <div class="courses">
      <h2>Available Courses:</h2>
       <% if (courses.length > 0) { %>
          <% courses.forEach(course => { %> 
              <a class="single" href="/courses/<%= course._id %> ">
-                 <h3 class="course">Course: <%= course.course %> </h3>
-                 <p class="teacher">Teacher: <%= course.teacher %> </p>
+                 <form method="POST">
+                 <h3 class="course" for="course">Course: <%= course.course %> </h3>
+                 <p class="teacher" for="teacher">Teacher: <%= course.teacher %> </p>
                  <p class="subject">Subject: <%= course.subject %></p>
+                 <!--<button>Add</button>-->
+                 </form>
              </a>
          <% }) %> 
      <% } else { %> 
